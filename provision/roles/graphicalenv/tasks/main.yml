@@ -1,0 +1,7 @@
+- name: Install graphical environment LXDE
+  become: true
+  apt:
+   name:
+    - lxde
+   update_cache: yes
+   state: latest
