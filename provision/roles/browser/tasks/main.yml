@@ -1,0 +1,7 @@
+- name: Install Chromium web browser
+  become: true
+  apt:
+   name:
+    - chromium-browser
+   update_cache: yes
+   state: latest
