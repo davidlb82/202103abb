@@ -1,0 +1,8 @@
+- include_vars: vars/main.yml
+
+- name: Pull / Clone git repository
+  git:
+   repo: "{{ git_repo }}"
+   dest: "{{ dest_repo_dir }}"
+   update: yes
+   version: main
