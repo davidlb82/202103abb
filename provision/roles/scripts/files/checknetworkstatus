@@ -21,8 +21,10 @@ mydomain="$(hostname -d)"
 if ping -q -c 1 -W 1 $mydefaultgw > /dev/null;
 then
 	echo "Connection to $mydefaultgw is up"
+	exit 0
 else
 	echo "Connection to $mydefaultgw is down"
+	exit 1
 fi
 
 # Show result in terminal
