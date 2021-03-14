@@ -1,6 +1,6 @@
-git_url: 'https://github.com/davidlb82/202103abb.git'
+git_repo: 'https://github.com/davidlb82/202103abb.git'
 git_key: ''
 git_branch: 'main'
 git_username: 'david'
 git_email: 'david.lb82@gmail.com'
-dest_repo_dir: '~/.'
+dest_repo_dir: '~/202103abb/.'

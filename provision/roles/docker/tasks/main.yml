@@ -7,8 +7,8 @@
     - curl
     - gnupg-agent
     - software-properties-common
-  update_cache: yes
-  state: latest
+   update_cache: yes
+   state: latest
 
 - name: Import GPG Key for Docker repository
   become: true
