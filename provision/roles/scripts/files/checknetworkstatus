@@ -20,13 +20,14 @@ mydomain="$(hostname -d)"
 # Check network connectivity to default gateway
 if ping -q -c 1 -W 1 $mydefaultgw > /dev/null;
 then
-	echo "Connection to $mydefaultgw is up"
+	status="UP"
+	echo "Connection to $mydefaultgw is $status"
 	exit 0
 else
-	echo "Connection to $mydefaultgw is down"
+	status="DOWN"
+	echo "Connection to $mydefaultgw is $status"
 	exit 1
 fi
 
-# Show result in terminal
-# echo "Local IP: $mylocalip and Public IP: $mypublicip using gateway: $mydefaultgw"
-# echo "I'm in computer $myhostname in domain $mydomain"
+# JSON Encode result -> to use this is necessary to comment exit in if statement
+# js_out="{\"localip\":${mylocalip},\"publicip\":${mypublicip},\"hostname\":${myhostname},\"domain\":${mydomain},\"status\":${status}}"
